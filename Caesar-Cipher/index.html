@@ -11,19 +11,16 @@
   <div class="card-container">
     <h1>Caesar Cipher Encryptor & Decryptor</h1>
 
-    <!-- Message Input -->
     <div class="form-group">
       <label for="inputText" class="label">Message</label>
       <textarea id="inputText" placeholder="Enter your message..."></textarea>
     </div>
 
-    <!-- Shift Key -->
     <div class="form-group">
       <label for="shiftValue" class="label">Shift Key</label>
       <input type="number" id="shiftValue" class="shift-input" min="1" max="25" value="3">
     </div>
 
-    <!-- Main Action Buttons -->
     <div class="button-row">
       <button class="btn btn-blue" onclick="encryptText()">Encrypt</button>
       <button class="btn btn-blue" onclick="decryptText()">Decrypt</button>
@@ -31,20 +28,17 @@
 
     <hr class="divider">
 
-    <!-- Output Message -->
     <div class="form-group">
       <label for="outputText" class="label">Encrypted / Decrypted Message</label>
       <textarea id="outputText" class="output-box" readonly placeholder="Result will appear here..."></textarea>
     </div>
 
-    <!-- Secondary Action Buttons -->
     <div class="button-row">
       <button class="btn btn-blue" onclick="copyOutput()">Copy</button>
       <button class="btn btn-blue" onclick="clearFields()">Clear</button>
     </div>
   </div>
 
-  <!-- Center Dialog Box Modal -->
   <div id="copyModal" class="modal-overlay">
     <div class="modal-dialog">
       <div id="modalIcon" class="modal-icon">📋</div>

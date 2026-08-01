@@ -1,4 +1,3 @@
-
 function getShiftValue() {
   const shiftInput = document.getElementById('shiftValue');
   let shift = parseInt(shiftInput.value, 10);
@@ -10,7 +9,6 @@ function getShiftValue() {
   return shift;
 }
 
-// Caesar Cipher Core Calculation
 function caesarTransform(text, shift, mode) {
   if (!text) return '';
 
@@ -24,16 +22,11 @@ function caesarTransform(text, shift, mode) {
   for (let i = 0; i < text.length; i++) {
     const code = text.charCodeAt(i);
 
-    // Uppercase letters (A-Z: 65-90)
     if (code >= 65 && code <= 90) {
       result += String.fromCharCode(((code - 65 + effectiveShift) % 26) + 65);
-    }
-    // Lowercase letters (a-z: 97-122)
-    else if (code >= 97 && code <= 122) {
+    } else if (code >= 97 && code <= 122) {
       result += String.fromCharCode(((code - 97 + effectiveShift) % 26) + 97);
-    }
-    // Preserve spaces, numbers, and symbols unchanged
-    else {
+    } else {
       result += text[i];
     }
   }
@@ -41,7 +34,6 @@ function caesarTransform(text, shift, mode) {
   return result;
 }
 
-// Encrypt Text Function
 function encryptText() {
   const input = document.getElementById('inputText').value;
   const shift = getShiftValue();
@@ -55,7 +47,6 @@ function encryptText() {
   outputElement.value = caesarTransform(input, shift, 'encrypt');
 }
 
-// Decrypt Text Function
 function decryptText() {
   const input = document.getElementById('inputText').value;
   const shift = getShiftValue();
@@ -69,7 +60,6 @@ function decryptText() {
   outputElement.value = caesarTransform(input, shift, 'decrypt');
 }
 
-// Copy Output to Clipboard & Trigger Center Modal Dialog
 function copyOutput() {
   const outputText = document.getElementById('outputText').value;
 
@@ -85,7 +75,6 @@ function copyOutput() {
   });
 }
 
-// Open Center Modal Dialog
 function openCopyModal(icon, message) {
   const modal = document.getElementById('copyModal');
   const iconElement = document.getElementById('modalIcon');
@@ -99,7 +88,6 @@ function openCopyModal(icon, message) {
   }
 }
 
-// Close Center Modal Dialog
 function closeCopyModal() {
   const modal = document.getElementById('copyModal');
   if (modal) {
@@ -107,14 +95,12 @@ function closeCopyModal() {
   }
 }
 
-// Clear Input, Shift Value, and Output Fields
 function clearFields() {
   document.getElementById('inputText').value = '';
   document.getElementById('shiftValue').value = 3;
   document.getElementById('outputText').value = '';
 }
 
-// Event Listeners for Overlay Click and Escape Key
 document.addEventListener('click', function(e) {
   const modal = document.getElementById('copyModal');
   if (modal && e.target === modal) {

@@ -1,14 +1,8 @@
-/* ==========================================================================
-   Base64 Encoder & Decoder - JavaScript Functions & Center Modal Dialog
-   ========================================================================== */
-
-// UTF-8 Safe Base64 Encoding
 function encodeText() {
   const input = document.getElementById('inputText').value;
   const outputElement = document.getElementById('outputText');
   const errorElement = document.getElementById('errorMessage');
 
-  // Hide previous error message
   errorElement.classList.remove('active');
 
   if (!input) {
@@ -26,13 +20,11 @@ function encodeText() {
   }
 }
 
-// UTF-8 Safe Base64 Decoding with Error Handling
 function decodeText() {
   const input = document.getElementById('inputText').value.trim();
   const outputElement = document.getElementById('outputText');
   const errorElement = document.getElementById('errorMessage');
 
-  // Reset error state
   errorElement.classList.remove('active');
 
   if (!input) {
@@ -64,14 +56,12 @@ function decodeText() {
   }
 }
 
-// Display Invalid Base64 Error Banner
 function showError() {
   const errorElement = document.getElementById('errorMessage');
   errorElement.textContent = 'Invalid Base64 String';
   errorElement.classList.add('active');
 }
 
-// Copy Output to Clipboard & Open Center Dialog Box
 function copyOutput() {
   const outputText = document.getElementById('outputText').value;
 
@@ -87,7 +77,6 @@ function copyOutput() {
   });
 }
 
-// Open Center Modal Dialog with Dynamic Icon & Message
 function openCopyModal(icon, message) {
   const modal = document.getElementById('copyModal');
   const iconElement = document.getElementById('modalIcon');
@@ -101,7 +90,6 @@ function openCopyModal(icon, message) {
   }
 }
 
-// Close Center Modal Dialog
 function closeCopyModal() {
   const modal = document.getElementById('copyModal');
   if (modal) {
@@ -109,14 +97,12 @@ function closeCopyModal() {
   }
 }
 
-// Clear Input, Output, and Error Banner
 function clearFields() {
   document.getElementById('inputText').value = '';
   document.getElementById('outputText').value = '';
   document.getElementById('errorMessage').classList.remove('active');
 }
 
-// Close modal when clicking outside dialog or pressing Escape key
 document.addEventListener('click', function(e) {
   const modal = document.getElementById('copyModal');
   if (modal && e.target === modal) {

@@ -1,29 +1,33 @@
 # Caesar Cipher Encryptor & Decryptor
 
-![Caesar Cipher Logo](assets/logo.png)
+An interactive web application built with HTML5, CSS3, and JavaScript to encrypt and decrypt text using the Caesar Cipher substitution algorithm.
 
-A simple, interactive web application to encrypt, decrypt, and visualize Caesar Cipher transformations.
+---
 
-## 🚀 Features
+## 🎨 UI & Design Layout
 
-- **Encrypt & Decrypt**: Custom shift values from 1 to 25.
-- **Shift Control**: Range slider, number spinner, and preset chips (Shift 1, Shift 3 Classic, Shift 13 ROT13, Shift 25, Random Shift).
-- **Preserve Settings**: Preserve spaces, numbers, and symbols options.
-- **Live Output Updates**: Real-time update as you type.
-- **Visualizer**: Dual alphabet tape strips and character breakdown cards.
-- **Brute Force Cracker**: Test all 25 shift possibilities simultaneously.
-- **Dark Mode**: Switch between Light and Dark themes.
+- **Layout**: Modern Centered Card Layout
+- **Background**: Light Blue (`#EAF6FF`)
+- **Card**: White (`#FFFFFF`) with rounded corners and soft shadow
+- **Buttons**: Blue (`#2563EB`) arranged in horizontal side-by-side rows (`[ Encrypt ] [ Decrypt ]` & `[ Copy ] [ Clear ]`)
+- **Modal Dialog**: Center popup modal displaying copy status (`Copied output to clipboard!` / `No output text to copy!`).
 
-## 📁 Project Structure
+---
+
+## ⚡ Features
+
+- **Encrypt**: Encrypts messages with shift key ($1 - 25$).
+- **Decrypt**: Decrypts messages back to plain text.
+- **Preserve Special Characters**: Spaces, numbers, and symbols remain unchanged.
+- **Copy & Clear**: One-click copy output with center dialog box and clear button.
+
+---
+
+## 📁 File Structure
 
 ```
 Caesar-Cipher/
-│
-├── index.html          # Semantic HTML layout
-├── style.css           # Custom styling & dark mode tokens
-├── script.js           # Caesar Cipher logic & DOM event handlers
-├── assets/
-│   ├── logo.png        # Logo icon
-│   └── background.jpg  # Wallpaper
-└── README.md           # Documentation
+├── index.html
+├── style.css
+└── script.js
 ```
