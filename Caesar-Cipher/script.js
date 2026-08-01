@@ -1,8 +1,4 @@
-/* ==========================================================================
-   Caesar Cipher Encryptor & Decryptor - JavaScript Functions & Modal Dialog
-   ========================================================================== */
 
-// Helper to get and sanitize shift value (1 - 25)
 function getShiftValue() {
   const shiftInput = document.getElementById('shiftValue');
   let shift = parseInt(shiftInput.value, 10);
