@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>HASH GENERATOR</h1>
+
+        <!-- Input Text Area -->
+        <label for="inputText">Enter Text</label>
+        <textarea id="inputText" placeholder="Enter text to generate hash..."></textarea>
+
+        <!-- Select Hash Algorithm -->
+        <label for="hashAlgo">Select Hash Type</label>
+        <select id="hashAlgo">
+            <option value="SHA-256">SHA-256 bit</option>
+            <option value="SHA-512">SHA-512 bit</option>
+            <option value="SHA-384">SHA-384 bit</option>
+            <option value="SHA-1">SHA-1 bit</option>
+        </select>
+
+        <!-- Generate Button -->
+        <button id="generateBtn" onclick="generateHash()">Generate</button>
+
+        <hr>
+
+        <!-- Output Hash Box -->
+        <label for="hashOutput">HASH OUTPUT</label>
+        <textarea id="hashOutput" readonly placeholder="Generated hash will appear here..."></textarea>
+
+        <!-- Copy and Clear Action Buttons -->
+        <div class="button-group">
+            <button onclick="copyHash()">Copy Hash</button>
+            <button onclick="clearFields()" class="btn-clear">Clear</button>
+        </div>
+
+        <!-- Important Cybersecurity Concept -->
+        <div class="concept-section">
+            <h3>Cybersecurity Concept: Hashing vs Encryption</h3>
+            <p><strong>Hashing:</strong> Plain Text ➔ SHA-256 ➔ Hash (One-way process, cannot be decrypted).</p>
+            <p><strong>Encryption:</strong> Plain Text ➔ Encryption ➔ Encrypted Text ➔ Decryption ➔ Plain Text (Two-way
+                process with key).</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

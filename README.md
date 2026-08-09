@@ -24,8 +24,14 @@ A collection of interactive web applications for classical cryptography and data
   - Side-by-side horizontal green action buttons (`[ Encode ] [ Decode ] [ Copy Output ] [ Clear ]`).
   - Center popup dialog for copy status.
 
-### 3. Advanced Base64 Codec (`Base64-Encoder-Decoder/`)
-- Advanced suite featuring a 6-bit chunking visualizer, live data expansion ratios, and image file upload to Base64 Data URIs.
+### 3. Hash Generator (`Hash Generator/`)
+- **Design**: Terminal-Style Cybersecurity Tool
+- **Theme**: Dark Mode (`#101010` background, `#181818` card container, Green accent `#00ff66`, Input `#222222`, Output `#0a0a0a`)
+- **Features**:
+  - One-way cryptographic hashing using Web Crypto API (`crypto.subtle.digest`).
+  - Supports **SHA-256**, **SHA-512**, **SHA-384**, and **SHA-1** algorithms.
+  - Action buttons for **Generate**, **Copy Hash**, and **Clear**.
+  - Educational concept breakdown comparing **Hashing (One-Way)** vs **Encryption (Two-Way)**.
 
 ---
 
@@ -41,10 +47,11 @@ A collection of interactive web applications for classical cryptography and data
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
-├── Base64-Encoder-Decoder/
+├── Hash Generator/
 │   ├── index.html
 │   ├── style.css
-│   └── script.js
+│   ├── script.js
+│   └── README.md
 ├── index.html
 └── README.md
 ```
