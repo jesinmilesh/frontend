@@ -33,6 +33,15 @@ A collection of interactive web applications for classical cryptography and data
   - Action buttons for **Generate**, **Copy Hash**, and **Clear**.
   - Educational concept breakdown comparing **Hashing (One-Way)** vs **Encryption (Two-Way)**.
 
+### 4. Cyber Security Awareness & Security Check (`Awareness and Tips/`)
+- **Design**: Step-by-Step Interactive Card Flow
+- **Theme**: Slate Dark Mode (`#0F172A` background, `#1E293B` card containers, `#22C55E` green accent)
+- **Features**:
+  - Interactive topic selector for **Passwords**, **Phishing**, **Browsing**, **Mobile**, **Devices**, and **Wi-Fi** security.
+  - Step 1: Displays educational awareness background and 5 topic safety tips.
+  - Step 2: Interactive 5-question Yes/No **Security Check** evaluation ($0 - 100$ score).
+  - Step 3: Color-coded rating badges (🟢 EXCELLENT, 🟡 GOOD, 🟠 NEEDS IMPROVEMENT, 🔴 HIGH RISK) and full answer breakdown.
+
 ---
 
 ## 📁 Repository Structure
@@ -48,6 +57,11 @@ A collection of interactive web applications for classical cryptography and data
 │   ├── style.css
 │   └── script.js
 ├── Hash Generator/
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   └── README.md
+├── Awareness and Tips/
 │   ├── index.html
 │   ├── style.css
 │   ├── script.js

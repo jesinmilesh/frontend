@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Awareness & Security Check</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>CYBER SECURITY AWARENESS</h1>
+
+        <!-- Step 1: Select Topic Buttons -->
+        <div class="topics">
+            <button onclick="showTips('passwords')">🔐 Password</button>
+            <button onclick="showTips('phishing')">🎣 Phishing</button>
+            <button onclick="showTips('browsing')">🌐 Browsing</button>
+            <button onclick="showTips('mobile')">📱 Mobile</button>
+            <button onclick="showTips('devices')">💻 Device</button>
+            <button onclick="showTips('wifi')">📶 Wi-Fi</button>
+        </div>
+
+        <!-- Box 1: Awareness & Safety Tips -->
+        <div id="tipsBox" class="box">
+            <h2 id="topicTitle">🔐 PASSWORD SECURITY</h2>
+            <p id="awarenessText"></p>
+
+            <h3>Safety Tips:</h3>
+            <ul id="tipsList"></ul>
+
+            <button onclick="showQuestions()" class="btn-main">Take Security Check</button>
+        </div>
+
+        <!-- Box 2: 5 Yes/No Questions -->
+        <div id="quizBox" class="box hidden">
+            <h2>SECURITY CHECK</h2>
+            <form onsubmit="checkScore(event)">
+                <div id="questionsList"></div>
+                <button type="submit" class="btn-main">Submit</button>
+            </form>
+        </div>
+
+        <!-- Box 3: Score & Feedback -->
+        <div id="resultBox" class="box text-center hidden">
+            <h2>YOUR SCORE</h2>
+            <div id="scoreText" class="score">0 / 100</div>
+            <div id="ratingBadge" class="badge">🟢 EXCELLENT</div>
+            <p id="ratingDesc"></p>
+            <p id="countSummary"></p>
+            <div id="breakdown"></div>
+            <button onclick="showTips(currentTopic)" class="btn-main">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
